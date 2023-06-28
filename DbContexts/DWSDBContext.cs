@@ -1,7 +1,7 @@
-using APIFuelStation.Models;
+using APIDWS.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace APIFuelStation.DbContexts {
+namespace APIDWS.DbContexts {
     public class FuelDBContext : DbContext {
 
         public FuelDBContext (DbContextOptions<FuelDBContext> opt) : base (opt) {

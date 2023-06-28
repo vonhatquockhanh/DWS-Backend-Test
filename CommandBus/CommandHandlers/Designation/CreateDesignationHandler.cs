@@ -1,11 +1,11 @@
 using System.Threading;
 using System.Threading.Tasks;
-using APIFuelStation.CommandBus.Commands;
-using APIFuelStation.IRepositories;
-using APIFuelStation.Models;
+using APIDWS.CommandBus.Commands;
+using APIDWS.IRepositories;
+using APIDWS.Models;
 using MediatR;
 
-namespace APIFuelStation.CommandBus
+namespace APIDWS.CommandBus
 {
 
     public class CreateDesignationHandler : IRequestHandler<CreateDesignationCommand, Designation>

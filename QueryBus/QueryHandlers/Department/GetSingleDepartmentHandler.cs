@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using APIFuelStation.IRepositories;
-using APIFuelStation.Models;
+using APIDWS.IRepositories;
+using APIDWS.Models;
 using MediatR;
 
-namespace APIFuelStation.QueryBus.Queries
+namespace APIDWS.QueryBus.Queries
 {
     public class GetSingleDepartmentHandler : MediatR.IRequestHandler<GetSingleDepartmentQuery, Department>
     {

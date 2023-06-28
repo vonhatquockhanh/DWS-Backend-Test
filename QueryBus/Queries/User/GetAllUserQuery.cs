@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using APIFuelStation.Models;
+using APIDWS.Models;
 
-namespace APIFuelStation.QueryBus.Queries {
+namespace APIDWS.QueryBus.Queries {
     public class GetAllUserQuery : MediatR.IRequest<List<User>> {
 
     }

@@ -1,4 +1,4 @@
-namespace APIFuelStation.Controllers {
+namespace APIDWS.Controllers {
     public class DummyControllerExample {
         // private readonly IMediator _mediator;
 

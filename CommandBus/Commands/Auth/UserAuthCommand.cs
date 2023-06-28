@@ -1,7 +1,7 @@
-using APIFuelStation.ViewModel;
+using APIDWS.ViewModel;
 using MediatR;
 
-namespace APIFuelStation.CommandBus.Commands {
+namespace APIDWS.CommandBus.Commands {
     public class UserAuthCommand : IRequest<TokenViewModel> {
         public string Email { get; set; }
         public string Password { get; set; }

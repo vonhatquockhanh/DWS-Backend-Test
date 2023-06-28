@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using APIFuelStation.IRepositories;
-using APIFuelStation.Models;
+using APIDWS.IRepositories;
+using APIDWS.Models;
 using FluentValidation;
 
-namespace APIFuelStation.ModelsValidator {
+namespace APIDWS.ModelsValidator {
 
     public class EmployeeValidator : AbstractValidator<Employee> {
 

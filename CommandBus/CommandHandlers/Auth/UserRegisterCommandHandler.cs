@@ -1,10 +1,10 @@
 using System.Threading;
 using System.Threading.Tasks;
-using APIFuelStation.IRepositories;
-using APIFuelStation.Models;
+using APIDWS.IRepositories;
+using APIDWS.Models;
 using MediatR;
 
-namespace APIFuelStation.CommandBus {
+namespace APIDWS.CommandBus {
 
     public class UserRegisterCommandHandler : IRequestHandler<UserRegisterCommand, User> {
         private readonly IUserRepository _userRepository;

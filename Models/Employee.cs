@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace APIFuelStation.Models {
+namespace APIDWS.Models {
     public class Employee {
         [Key]
         public int Id { get; set; }

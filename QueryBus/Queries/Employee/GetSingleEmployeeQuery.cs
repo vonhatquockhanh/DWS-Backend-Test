@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using APIFuelStation.Models;
+using APIDWS.Models;
 
-namespace APIFuelStation.QueryBus.Queries {
+namespace APIDWS.QueryBus.Queries {
     public class GetSingleEmployeeQuery : MediatR.IRequest<Employee> {
         public GetSingleEmployeeQuery (int id) {
             this.Id = id;

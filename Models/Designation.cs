@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace APIFuelStation.Models {
+namespace APIDWS.Models {
     public class Designation {
         [Key]
         public int Id { get; set; }

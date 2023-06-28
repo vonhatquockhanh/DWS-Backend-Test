@@ -1,8 +1,8 @@
-using APIFuelStation.Models;
-using APIFuelStation.ViewModel;
+using APIDWS.Models;
+using APIDWS.ViewModel;
 using MediatR;
 
-namespace APIFuelStation.CommandBus {
+namespace APIDWS.CommandBus {
     public class UserRegisterCommand : IRequest<User> {
         public User User { get; }
 

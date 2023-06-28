@@ -5,9 +5,9 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using APIFuelStation.CommandBus;
-using APIFuelStation.CommandBus.Commands;
-using APIFuelStation.Models;
+using APIDWS.CommandBus;
+using APIDWS.CommandBus.Commands;
+using APIDWS.Models;
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -16,7 +16,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace APIFuelStation.Controllers {
+namespace APIDWS.Controllers {
     [ApiController]
     [Route ("[controller]")]
     public class AuthController : ControllerBase {

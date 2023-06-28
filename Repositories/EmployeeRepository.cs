@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using APIFuelStation.DbContexts;
-using APIFuelStation.IRepositories;
-using APIFuelStation.Models;
+using APIDWS.DbContexts;
+using APIDWS.IRepositories;
+using APIDWS.Models;
 using BCrypt.Net;
 
-namespace APIFuelStation.Repositories {
+namespace APIDWS.Repositories {
     public class EmployeeRepository : IEmployeeRepository {
         private readonly FuelDBContext _context;
 

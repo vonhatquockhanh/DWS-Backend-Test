@@ -1,7 +1,7 @@
-using APIFuelStation.Models;
+using APIDWS.Models;
 using MediatR;
 
-namespace APIFuelStation.CommandBus.Commands {
+namespace APIDWS.CommandBus.Commands {
     public class DeleteEmployeeCommand : IRequest<Employee> {
         public DeleteEmployeeCommand (Employee employee) {
             Employee = employee;

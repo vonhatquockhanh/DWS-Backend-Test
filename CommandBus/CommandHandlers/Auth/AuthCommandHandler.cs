@@ -4,15 +4,15 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using APIFuelStation.CommandBus.Commands;
-using APIFuelStation.IRepositories;
-using APIFuelStation.Models;
-using APIFuelStation.ViewModel;
+using APIDWS.CommandBus.Commands;
+using APIDWS.IRepositories;
+using APIDWS.Models;
+using APIDWS.ViewModel;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace APIFuelStation.CommandBus {
+namespace APIDWS.CommandBus {
     public class AuthCommandHandler : IRequestHandler<UserAuthCommand, TokenViewModel> {
 
         private readonly IUserRepository _userrepository;

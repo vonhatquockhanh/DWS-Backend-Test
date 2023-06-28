@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace APIFuelStation.Migrations
+namespace APIDWS.Migrations
 {
     public partial class UniquePhoneUsername : Migration
     {

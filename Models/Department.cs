@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace APIFuelStation.Models
+namespace APIDWS.Models
 {
     public class Department
     {

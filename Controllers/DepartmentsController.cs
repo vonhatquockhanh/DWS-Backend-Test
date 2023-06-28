@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using APIFuelStation.CommandBus;
-using APIFuelStation.CommandBus.Commands;
-using APIFuelStation.Models;
-using APIFuelStation.QueryBus;
-using APIFuelStation.QueryBus.Queries;
+using APIDWS.CommandBus;
+using APIDWS.CommandBus.Commands;
+using APIDWS.Models;
+using APIDWS.QueryBus;
+using APIDWS.QueryBus.Queries;
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
-namespace APIFuelStation.Controllers
+namespace APIDWS.Controllers
 {
 
     [Produces("application/json")]

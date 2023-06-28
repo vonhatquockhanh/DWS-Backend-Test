@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using APIFuelStation.Models;
+using APIDWS.Models;
 
-namespace APIFuelStation.QueryBus
+namespace APIDWS.QueryBus
 {
     public class GetAllDepartmentQuery : MediatR.IRequest<List<Department>>
     {

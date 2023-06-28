@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using APIFuelStation.Models;
+using APIDWS.Models;
 
-namespace APIFuelStation.IRepositories {
+namespace APIDWS.IRepositories {
     public interface IEmployeeRepository {
 
         List<Employee> GetAllEmployees ();

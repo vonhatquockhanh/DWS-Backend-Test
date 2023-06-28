@@ -1,6 +1,6 @@
-using APIFuelStation.Models;
+using APIDWS.Models;
 
-namespace APIFuelStation.ViewModel {
+namespace APIDWS.ViewModel {
     public class TokenViewModel {
         public string? Token { get; set; }
         public string? RefreshToken { get; set; }

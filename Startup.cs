@@ -5,11 +5,11 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using APIFuelStation.DbContexts;
-using APIFuelStation.IRepositories;
-using APIFuelStation.Models;
-using APIFuelStation.ModelsValidator;
-using APIFuelStation.Repositories;
+using APIDWS.DbContexts;
+using APIDWS.IRepositories;
+using APIDWS.Models;
+using APIDWS.ModelsValidator;
+using APIDWS.Repositories;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using MediatR;
@@ -27,7 +27,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Serialization;
 
-namespace APIFuelStation {
+namespace APIDWS {
     public class Startup {
         public Startup (IConfiguration configuration) {
             Configuration = configuration;
@@ -39,7 +39,7 @@ namespace APIFuelStation {
         public void ConfigureServices (IServiceCollection services) {
 
             // Add Database
-            services.AddDbContext<FuelDBContext> (opt => opt.UseSqlServer (Configuration.GetConnectionString ("FuelStationDBConnection")));
+            services.AddDbContext<FuelDBContext> (opt => opt.UseSqlServer (Configuration.GetConnectionString ("DWSDBConnection")));
 
             // Add Controller
             services.AddControllers ().AddNewtonsoftJson (s => {
