@@ -31,13 +31,13 @@ namespace APIFuelStation.Controllers
         /// Get All of the Designations List
         /// </summary>
         /// <returns>A New Designation </returns>
-        [Authorize]
-        [HttpGet]
-        public async Task<IActionResult> GetAllDesignations()
-        {
-            var allDesignations = await _mediator.Send(new GetAllDesignationQuery());
-            return Ok(allDesignations);
-        }
+        // [Authorize]
+        // [HttpGet]
+        // public async Task<IActionResult> GetAllDesignations()
+        // {
+        //     var allDesignations = await _mediator.Send(new GetAllDesignationQuery());
+        //     return Ok(allDesignations);
+        // }
 
         // [Authorize]
         /// <summary>
@@ -45,15 +45,15 @@ namespace APIFuelStation.Controllers
         /// </summary>
         /// <returns>Get an Designation</returns>
         /// <response code="404">If user id not found</response> 
-        [Authorize]
-        [HttpGet("{id}", Name = "GetDesignationById")]
-        public async Task<IActionResult> GetDesignationById(int id)
-        {
-            var user = await _mediator.Send(new GetSingleDesignationQuery(id));
-            if (user == null)
-                return NotFound();
-            return Ok(user);
-        }
+        // [Authorize]
+        // [HttpGet("{id}", Name = "GetDesignationById")]
+        // public async Task<IActionResult> GetDesignationById(int id)
+        // {
+        //     var user = await _mediator.Send(new GetSingleDesignationQuery(id));
+        //     if (user == null)
+        //         return NotFound();
+        //     return Ok(user);
+        // }
 
         /// <summary>
         /// Creates a New Designation
@@ -71,13 +71,13 @@ namespace APIFuelStation.Controllers
         /// <returns>A newly created Designation Item</returns>
         /// <response code="200">Returns the newly created item</response>
         /// <response code="400">If any of the field is null</response> 
-        [Authorize]
-        [HttpPost]
-        public async Task<IActionResult> CreateDesignation(Designation user)
-        {
-            var userResponse = await _mediator.Send(new CreateDesignationCommand(user));
-            return Ok(userResponse);
-        }
+        // [Authorize]
+        // [HttpPost]
+        // public async Task<IActionResult> CreateDesignation(Designation user)
+        // {
+        //     var userResponse = await _mediator.Send(new CreateDesignationCommand(user));
+        //     return Ok(userResponse);
+        // }
 
         /// <summary>
         /// Updates a user
@@ -102,17 +102,17 @@ namespace APIFuelStation.Controllers
         /// <response code="200">Returns the newly updated user</response>
         /// <response code="400">If any of the field is null</response> 
         /// <response code="404">If user id not found</response> 
-        [Authorize]
-        [HttpPut("{id}", Name = "UpdateDesignation")]
-        public async Task<IActionResult> UpdateDesignation(int id, Designation user)
-        {
-            var designationSearchByID = await _mediator.Send(new GetSingleDesignationQuery(id));
-            if (designationSearchByID == null)
-                return NotFound();
+        // [Authorize]
+        // [HttpPut("{id}", Name = "UpdateDesignation")]
+        // public async Task<IActionResult> UpdateDesignation(int id, Designation user)
+        // {
+        //     var designationSearchByID = await _mediator.Send(new GetSingleDesignationQuery(id));
+        //     if (designationSearchByID == null)
+        //         return NotFound();
 
-            var userResponse = await _mediator.Send(new UpdateDesignationCommand(user));
-            return Ok(userResponse);
-        }
+        //     var userResponse = await _mediator.Send(new UpdateDesignationCommand(user));
+        //     return Ok(userResponse);
+        // }
 
         /// <summary>
         /// Deletes a user
@@ -121,16 +121,16 @@ namespace APIFuelStation.Controllers
         /// <response code="200">Returns the newly deleted user</response>
         /// <response code="400">If any of the field is null</response> 
         /// <response code="404">If user id not found</response> 
-        [Authorize]
-        [HttpDelete("{id}", Name = "DeleteDesignation")]
-        public async Task<IActionResult> DeleteDesignation(int id)
-        {
-            var designationSearchByID = await _mediator.Send(new GetSingleDesignationQuery(id));
-            if (designationSearchByID == null)
-                return NotFound();
+        // [Authorize]
+        // [HttpDelete("{id}", Name = "DeleteDesignation")]
+        // public async Task<IActionResult> DeleteDesignation(int id)
+        // {
+        //     var designationSearchByID = await _mediator.Send(new GetSingleDesignationQuery(id));
+        //     if (designationSearchByID == null)
+        //         return NotFound();
 
-            var userResponse = await _mediator.Send(new DeleteDesignationCommand(designationSearchByID));
-            return Ok(userResponse);
-        }
+        //     var userResponse = await _mediator.Send(new DeleteDesignationCommand(designationSearchByID));
+        //     return Ok(userResponse);
+        // }
     }
 }

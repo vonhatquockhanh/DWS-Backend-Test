@@ -28,17 +28,17 @@ namespace APIFuelStation.Controllers {
             this._mediator = mediator;
         }
 
-        [HttpPost ("Login")]
-        public async Task<IActionResult> Login ([FromBody] UserAuthCommand command) {
-            var result = await _mediator.Send (command);
-            return Ok (result);
-        }
+        // [HttpPost ("Login")]
+        // public async Task<IActionResult> Login ([FromBody] UserAuthCommand command) {
+        //     var result = await _mediator.Send (command);
+        //     return Ok (result);
+        // }
 
-        [HttpPost ("Register")]
-        public async Task<IActionResult> Register ([FromBody] UserRegisterCommand command) {
-            var result = await _mediator.Send (command);
-            return Ok (result);
-        }
+        // [HttpPost ("Register")]
+        // public async Task<IActionResult> Register ([FromBody] UserRegisterCommand command) {
+        //     var result = await _mediator.Send (command);
+        //     return Ok (result);
+        // }
 
     }
 }

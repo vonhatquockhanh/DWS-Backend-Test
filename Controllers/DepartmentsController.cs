@@ -31,13 +31,13 @@ namespace APIFuelStation.Controllers
         /// Get All of the Departments List
         /// </summary>
         /// <returns>A New Department </returns>
-        [Authorize]
-        [HttpGet]
-        public async Task<IActionResult> GetAllDepartments()
-        {
-            var allDepartments = await _mediator.Send(new GetAllDepartmentQuery());
-            return Ok(allDepartments);
-        }
+        // [Authorize]
+        // [HttpGet]
+        // public async Task<IActionResult> GetAllDepartments()
+        // {
+        //     var allDepartments = await _mediator.Send(new GetAllDepartmentQuery());
+        //     return Ok(allDepartments);
+        // }
 
         // [Authorize]
         /// <summary>
@@ -45,15 +45,15 @@ namespace APIFuelStation.Controllers
         /// </summary>
         /// <returns>Get an Department</returns>
         /// <response code="404">If user id not found</response> 
-        [Authorize]
-        [HttpGet("{id}", Name = "GetDepartmentById")]
-        public async Task<IActionResult> GetDepartmentById(int id)
-        {
-            var user = await _mediator.Send(new GetSingleDepartmentQuery(id));
-            if (user == null)
-                return NotFound();
-            return Ok(user);
-        }
+        // [Authorize]
+        // [HttpGet("{id}", Name = "GetDepartmentById")]
+        // public async Task<IActionResult> GetDepartmentById(int id)
+        // {
+        //     var user = await _mediator.Send(new GetSingleDepartmentQuery(id));
+        //     if (user == null)
+        //         return NotFound();
+        //     return Ok(user);
+        // }
 
         /// <summary>
         /// Creates a New Department
@@ -71,13 +71,13 @@ namespace APIFuelStation.Controllers
         /// <returns>A newly created Department Item</returns>
         /// <response code="200">Returns the newly created item</response>
         /// <response code="400">If any of the field is null</response> 
-        [Authorize]
-        [HttpPost]
-        public async Task<IActionResult> CreateDepartment(Department user)
-        {
-            var userResponse = await _mediator.Send(new CreateDepartmentCommand(user));
-            return Ok(userResponse);
-        }
+        // [Authorize]
+        // [HttpPost]
+        // public async Task<IActionResult> CreateDepartment(Department user)
+        // {
+        //     var userResponse = await _mediator.Send(new CreateDepartmentCommand(user));
+        //     return Ok(userResponse);
+        // }
 
         /// <summary>
         /// Updates a user
@@ -102,17 +102,17 @@ namespace APIFuelStation.Controllers
         /// <response code="200">Returns the newly updated user</response>
         /// <response code="400">If any of the field is null</response> 
         /// <response code="404">If user id not found</response> 
-        [Authorize]
-        [HttpPut("{id}", Name = "UpdateDepartment")]
-        public async Task<IActionResult> UpdateDepartment(int id, Department user)
-        {
-            var departmentSearchByID = await _mediator.Send(new GetSingleDepartmentQuery(id));
-            if (departmentSearchByID == null)
-                return NotFound();
+        // [Authorize]
+        // [HttpPut("{id}", Name = "UpdateDepartment")]
+        // public async Task<IActionResult> UpdateDepartment(int id, Department user)
+        // {
+        //     var departmentSearchByID = await _mediator.Send(new GetSingleDepartmentQuery(id));
+        //     if (departmentSearchByID == null)
+        //         return NotFound();
 
-            var userResponse = await _mediator.Send(new UpdateDepartmentCommand(user));
-            return Ok(userResponse);
-        }
+        //     var userResponse = await _mediator.Send(new UpdateDepartmentCommand(user));
+        //     return Ok(userResponse);
+        // }
 
         /// <summary>
         /// Deletes a user
@@ -121,16 +121,16 @@ namespace APIFuelStation.Controllers
         /// <response code="200">Returns the newly deleted user</response>
         /// <response code="400">If any of the field is null</response> 
         /// <response code="404">If user id not found</response> 
-        [Authorize]
-        [HttpDelete("{id}", Name = "DeleteDepartment")]
-        public async Task<IActionResult> DeleteDepartment(int id)
-        {
-            var departmentSearchByID = await _mediator.Send(new GetSingleDepartmentQuery(id));
-            if (departmentSearchByID == null)
-                return NotFound();
+        // [Authorize]
+        // [HttpDelete("{id}", Name = "DeleteDepartment")]
+        // public async Task<IActionResult> DeleteDepartment(int id)
+        // {
+        //     var departmentSearchByID = await _mediator.Send(new GetSingleDepartmentQuery(id));
+        //     if (departmentSearchByID == null)
+        //         return NotFound();
 
-            var userResponse = await _mediator.Send(new DeleteDepartmentCommand(departmentSearchByID));
-            return Ok(userResponse);
-        }
+        //     var userResponse = await _mediator.Send(new DeleteDepartmentCommand(departmentSearchByID));
+        //     return Ok(userResponse);
+        // }
     }
 }

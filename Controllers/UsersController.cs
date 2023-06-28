@@ -27,7 +27,7 @@ namespace APIFuelStation.Controllers {
         /// Get All of the Users List
         /// </summary>
         /// <returns>A New User </returns>
-        [Authorize]
+        // [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAllUsers () {
             var allUsers = await _mediator.Send (new GetAllUserQuery ());
@@ -40,7 +40,7 @@ namespace APIFuelStation.Controllers {
         /// </summary>
         /// <returns>Get an User</returns>
         /// <response code="404">If user id not found</response> 
-        [Authorize]
+        // [Authorize]
         [HttpGet ("{id}", Name = "GetUserById")]
         public async Task<IActionResult> GetUserById (int id) {
             var user = await _mediator.Send (new GetSingleUserQuery (id));
@@ -71,7 +71,7 @@ namespace APIFuelStation.Controllers {
         /// <returns>A newly created User Item</returns>
         /// <response code="200">Returns the newly created item</response>
         /// <response code="400">If any of the field is null</response> 
-        [Authorize]
+        // [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreateUser (User user) {
             var userResponse = await _mediator.Send (new CreateUserCommand (user));
@@ -101,7 +101,7 @@ namespace APIFuelStation.Controllers {
         /// <response code="200">Returns the newly updated user</response>
         /// <response code="400">If any of the field is null</response> 
         /// <response code="404">If user id not found</response> 
-        [Authorize]
+        // [Authorize]
         [HttpPut ("{id}", Name = "UpdateUser")]
         public async Task<IActionResult> UpdateUser (int id, User user) {
             var userSearchByID = await _mediator.Send (new GetSingleUserQuery (id));
@@ -119,7 +119,7 @@ namespace APIFuelStation.Controllers {
         /// <response code="200">Returns the newly deleted user</response>
         /// <response code="400">If any of the field is null</response> 
         /// <response code="404">If user id not found</response> 
-        [Authorize]
+        // [Authorize]
         [HttpDelete ("{id}", Name = "DeleteUser")]
         public async Task<IActionResult> DeleteUser (int id) {
             var userSearchByID = await _mediator.Send (new GetSingleUserQuery (id));

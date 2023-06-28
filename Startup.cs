@@ -87,7 +87,7 @@ namespace APIFuelStation {
 
             // Add Swagger
             services.AddSwaggerGen (c => {
-                c.SwaggerDoc ("v1", new OpenApiInfo { Title = "Fuel Station API", Description = "Fuel Station API Full using Dot Net Core 6.0", Version = "v1" });
+                c.SwaggerDoc ("v1", new OpenApiInfo { Title = "HipSeng DWS Backend API", Description = "HipSeng DWS Backend API Full using Dot Net Core 6.0", Version = "v1" });
                 c.AddSecurityDefinition ("Bearer", new OpenApiSecurityScheme {
                     Description = @"JWT Authorization header using the Bearer scheme. \r\n\r\n 
                                 Enter 'Bearer' [space] and then your token in the text input below.
