@@ -48,15 +48,9 @@ namespace APIDWS {
 
             // Add Tables and Repositories
             services.AddScoped<IUserRepository, UserRepository> ();
-            services.AddScoped<IDepartmentRepository, DepartmentRepository> ();
-            services.AddScoped<IDesignationRepository, DesignationRepository> ();
-            services.AddScoped<IEmployeeRepository, EmployeeRepository> ();
 
             // Add Validations Mapping
             services.AddTransient<IValidator<User>, UserValidator> ();
-            services.AddTransient<IValidator<Designation>, DesignationValidator> ();
-            services.AddTransient<IValidator<Department>, DepartmentValidator> ();
-            services.AddTransient<IValidator<Employee>, EmployeeValidator> ();
 
             // Add CORS Policy
             services.AddCors (options => {
