@@ -8,9 +8,9 @@ using BCrypt.Net;
 
 namespace APIDWS.Repositories {
     public class UserRepository : IUserRepository {
-        private readonly FuelDBContext _context;
+        private readonly DWSDBContext _context;
 
-        public UserRepository (FuelDBContext context) {
+        public UserRepository (DWSDBContext context) {
             this._context = context;
         }
 

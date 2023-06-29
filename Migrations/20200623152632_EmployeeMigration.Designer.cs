@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace APIDWS.Migrations
 {
-    [DbContext(typeof(FuelDBContext))]
+    [DbContext(typeof(DWSDBContext))]
     [Migration("20200623152632_EmployeeMigration")]
     partial class EmployeeMigration
     {

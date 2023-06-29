@@ -9,9 +9,9 @@ namespace APIDWS.Repositories
 {
     public class DesignationRepository : IDesignationRepository
     {
-        private readonly FuelDBContext _context;
+        private readonly DWSDBContext _context;
 
-        public DesignationRepository(FuelDBContext context)
+        public DesignationRepository(DWSDBContext context)
         {
             this._context = context;
         }

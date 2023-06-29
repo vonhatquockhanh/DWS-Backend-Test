@@ -8,9 +8,9 @@ using BCrypt.Net;
 
 namespace APIDWS.Repositories {
     public class EmployeeRepository : IEmployeeRepository {
-        private readonly FuelDBContext _context;
+        private readonly DWSDBContext _context;
 
-        public EmployeeRepository (FuelDBContext context) {
+        public EmployeeRepository (DWSDBContext context) {
             this._context = context;
         }
 

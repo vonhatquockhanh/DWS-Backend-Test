@@ -39,7 +39,7 @@ namespace APIDWS {
         public void ConfigureServices (IServiceCollection services) {
 
             // Add Database
-            services.AddDbContext<FuelDBContext> (opt => opt.UseSqlServer (Configuration.GetConnectionString ("DWSDBConnection")));
+            services.AddDbContext<DWSDBContext> (opt => opt.UseSqlServer (Configuration.GetConnectionString ("DWSDBConnection")));
 
             // Add Controller
             services.AddControllers ().AddNewtonsoftJson (s => {

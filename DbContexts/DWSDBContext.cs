@@ -2,9 +2,9 @@ using APIDWS.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace APIDWS.DbContexts {
-    public class FuelDBContext : DbContext {
+    public class DWSDBContext : DbContext {
 
-        public FuelDBContext (DbContextOptions<FuelDBContext> opt) : base (opt) {
+        public DWSDBContext (DbContextOptions<DWSDBContext> opt) : base (opt) {
 
         }
 

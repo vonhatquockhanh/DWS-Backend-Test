@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace APIDWS.Migrations
 {
-    [DbContext(typeof(FuelDBContext))]
-    partial class FuelDBContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(DWSDBContext))]
+    partial class DWSDBContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

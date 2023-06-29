@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace APIDWS.Migrations
 {
-    [DbContext(typeof(FuelDBContext))]
+    [DbContext(typeof(DWSDBContext))]
     [Migration("20200620045532_UniquePhoneUsername")]
     partial class UniquePhoneUsername
     {
